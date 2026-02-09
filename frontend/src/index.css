@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+:root {
+  --bg0: #06101a;
+  --bg1: #071828;
+
+  --surfaceA: rgba(255, 255, 255, 0.06);
+  --surfaceB: rgba(255, 255, 255, 0.03);
+
+  --surface2A: rgba(255, 255, 255, 0.07);
+  --surface2B: rgba(255, 255, 255, 0.04);
+
+  --border: rgba(255, 255, 255, 0.10);
+  --border2: rgba(255, 255, 255, 0.16);
+
+  --text: #e9f2ff;
+  --muted: rgba(233, 242, 255, 0.72);
+
+  --primary: #4fd1ff;
+  --primary2: #7c5cff;
+
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+  --shadowSoft: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(1000px 550px at 15% 10%, rgba(79,209,255,.22), transparent 58%),
+    radial-gradient(900px 560px at 85% 15%, rgba(124,92,255,.20), transparent 55%),
+    radial-gradient(900px 700px at 60% 100%, rgba(79,209,255,.10), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  overflow-x: hidden;
+}
+
+.ss-surface,
+.surface,
+.card {
+  background: linear-gradient(180deg, var(--surfaceA), var(--surfaceB));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadowSoft);
+  backdrop-filter: blur(12px);
+}
+
+.ss-surface-2,
+.surface-2 {
+  background: linear-gradient(180deg, var(--surface2A), var(--surface2B));
+  border: 1px solid var(--border2);
+  box-shadow: var(--shadowSoft);
+  backdrop-filter: blur(14px);
+}
+
+.ss-title { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; }
+.ss-sub { color: var(--muted); font-size: 13px; }
+
+.ss-input,
+.input {
+  width: 100%;
+  border-radius: 16px;
+  padding: 12px 14px;
+  outline: none;
+  transition: 180ms ease;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  color: var(--text);
+}
+.ss-input:focus,
+.input:focus {
+  border-color: rgba(79,209,255,.55);
+  box-shadow: 0 0 0 4px rgba(79,209,255,.12);
+}
+
+.ss-btn,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-weight: 650;
+  transition: 180ms ease;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+.ss-btn:hover,
+.btn:hover { background: rgba(255,255,255,.09); }
+.ss-btn:active,
+.btn:active { transform: scale(0.985); }
+
+.ss-btn-primary,
+.btn-primary {
+  border: 1px solid rgba(79,209,255,.55);
+  background: linear-gradient(135deg, rgba(79,209,255,.35), rgba(124,92,255,.25));
+  box-shadow: 0 10px 28px rgba(79,209,255,.10);
+}
+.ss-btn-primary:hover,
+.btn-primary:hover {
+  background: linear-gradient(135deg, rgba(79,209,255,.42), rgba(124,92,255,.30));
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.05);
+}
+.btn-ghost:hover { background: rgba(255,255,255,.08); }
+
+.ss-iconbtn {
+  border-radius: 16px;
+  padding: 12px;
+  transition: 180ms ease;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+}
+.ss-iconbtn:hover { background: rgba(255,255,255,.10); }
+.ss-iconbtn:active { transform: scale(0.985); }
+
+.ss-table {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+}
+.ss-th {
+  padding: 12px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(233,242,255,.78);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+}
+.ss-td {
+  padding: 12px 14px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  color: rgba(233,242,255,.90);
+}
+
+.ss-select {
+  border-radius: 16px;
+  padding: 10px 12px;
+  outline: none;
+  transition: 180ms ease;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  color: var(--text);
+}
+
+select, option { color: #0b1220; }

@@ -1,0 +1,14 @@
+import mongoose from "mongoose";
+import { env } from "./env.js";
+
+export async function connectDB() {
+  if (!env.MONGO_URI) throw new Error("MONGO_URI is missing in .env");
+
+  mongoose.set("strictQuery", true);
+
+  await mongoose.connect(env.MONGO_URI, {
+    autoIndex: true
+  });
+
+  console.log("✅ MongoDB connected");
+}
